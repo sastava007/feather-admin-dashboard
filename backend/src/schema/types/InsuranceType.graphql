@@ -1,0 +1,5 @@
+enum InsuranceType {
+  LIABILITY
+  HOUSEHOLD
+  HEALTH
+}

@@ -1,0 +1,6 @@
+scalar Date
+type Customer {
+  firstName: String
+  lastName: String
+  dateOfBirth: Date
+}

@@ -1,0 +1,6 @@
+enum PolicyStatus {
+  ACTIVE
+  PENDING
+  CANCELLED
+  DROPPED_OUT
+}

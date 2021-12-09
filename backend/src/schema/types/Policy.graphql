@@ -1,0 +1,22 @@
+scalar Date
+type Policy {
+  _id: String
+  customer: Customer
+  provider: String
+  insurance_type: InsuranceType
+  status: PolicyStatus
+  policyNumber: String
+  startDate: Date
+  endDate: Date
+  createdAt: Date
+}
+
+input PolicyInput {
+  provider: String
+  status: PolicyStatus
+  insurance_type: InsuranceType
+}
+
+type Mutation {
+  updatePolicy(id: String!, policy: PolicyInput): Policy
+}
