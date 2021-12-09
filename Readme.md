@@ -1,64 +1,49 @@
-# Feather - Fullstack Engineer code challenge
+# Feather Admin Dashboard
 
-In this code challenge you'll need to create a simple admin panel from scratch. It would need to have a single table view to list insurance policies showcasing all the various field they may have.
+An Admin Panel that provides a table view to display details of all the insurance policies  managed by the operations team.
 
-The [frontend](./frontend) part would communicate with the [backend](./backend) through a GraphQL API. You need to implement both.
+### What I built?
+ - Defined new GraphQL types to support various fields related to a policy, and changed the schema accordingly. 
+ - Created GraphQL endpoints to serve the data from a persistent storage.
+ - Query the Apollo server to fetch and render the data in a tabular form.
+ - Added pagination support, and sorting on every column.
+ - Implemented a global text search method, along with a drop down filter through which admin can select policies based on insurance type.
+ - Implemented Edit option to perform mutation and update the policy details.
+ - Wrote a script to seed the database by importing sample data.
+ -  Dockerized the complete application 
 
-We've generated some boilerplate for you to get started.
+### Tech Stack?
+ - GraphQL
+ - Apollo Client & Server
+ - TypeScript
+ - ReactJS
+ - Tailwind CSS
+ - MongoDB
+ - Docker & docker-compose
 
-## What we'll be looking at
+### How to setup?
+Step1:
 
-- How you write idiomatic code.
-- How you deal with UI/UX.
-- How you navigate the requirements.
-- How you test & write testable code.
-- How you package the code.
-- How you deal with the security concerns.
-- How you communicate with your fellow programmers.
+    git clone https://github.com/sastava007/feather-admin-dashboard.git
+Step2:
 
-## Tasks
+    cd feather-admin-dashboard
 
-1. On the [backend](./backend), change the GraphQL schema to reflect the [Data structure](#Data-structure)
-2. On the [frontend](./frontend), fetch the data returned by the GraphQL endpoint with the help of the [Apollo client](https://www.apollographql.com)
-3. On the [frontend](./frontend), display all the data returned by the endpoint in a table with the help of [tailwindcss](https://tailwindcss.com)
-   - At least several fields should be editable in place
-   - The table should have pagination and sorting on each of the columns
-   - (Bonus) Add a text search input
-   - (Bonus) Let the admin filter policies by insurance type or other fields
-4. (Bonus) Package the app with Docker
-5. (Bonus) Authenticate admins using login/password
-6. (Bonus) Create more screens (e.g. customer profile, policy page…)
+Step3:
 
-## Data structure
+    docker-compose up --build
 
-To make it all work, you have to define a [GraphQL schema first](https://www.apollographql.com/docs/apollo-server/schema/schema/). No need to back it with a real database, however this would make sense to demonstrate the "edit" function.
-Each policy should have at least the following fields:
+Now wait till all the containers get up and running, and then navigate to http://localhost:3000/ 
 
-### Policy
 
-| fields         | type                            | comment                                       |
-| -------------- | ------------------------------- | --------------------------------------------- |
-| customer       | [Customer](#Customer)           | Object holding the customer's informations    |
-| provider       | string                          | Name of the provider (Allianz, AXA…)          |
-| insurance type | [InsuranceType](#InsuranceType) | Type of the insurance (Liability, Household…) |
-| status         | [PolicyStatus](#PolicyStatus)   | Status of the insurance (Active, Cancelled)   |
-| policyNumber   | string                          | Used to identify the policy                   |
-| startDate      | date                            | Date when the policy should start             |
-| endDate        | date                            | Date when the policy ends                     |
-| createdAt      | date                            | Date when the record was created              |
+### Further Improvements
 
-### Customer
+ - Add a feature for admin registration so that only authenticated user can access the data, and may extend this feature by defining various roles and render different data based on user's athorization level.
 
-| fields      | type   | comment                  |
-| ----------- | ------ | ------------------------ |
-| firstName   | string | Customer’s first name    |
-| lastName    | string | Customer’s last name     |
-| dateOfBirth | date   | Customer’s date of birth |
+ - Create a profile page of customer to show all the metadata of a user.
+ 
+### Screenshots
+![enter image description here](https://i.imgur.com/JXPOBUe.png)
 
-### InsuranceType
 
-InsuranceType can be of `Liability`, `Household`, `Health`
-
-### PolicyStatus
-
-PolicyStatus can be of `Active`, `Pending`, `Cancelled` and `Dropped out`
+https://user-images.githubusercontent.com/43990819/145490070-cf199be1-2bbf-4c09-a897-2c97aae63e27.mp4

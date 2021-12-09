@@ -3,8 +3,6 @@ import mongoose, { ConnectOptions } from "mongoose";
 export let database: mongoose.Connection;
 
 export const connect = async () => {
-  // const uri =
-  //   "mongodb+srv://admin:abcd1234@cluster0.i2n6l.mongodb.net/db?retryWrites=true&w=majority";
   const uri = "mongodb://mongo_db:27017/db";
   if (database) {
     return;
