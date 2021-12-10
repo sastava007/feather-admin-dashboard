@@ -1,7 +1,7 @@
-import React from "react";
-import { useAsyncDebounce } from "react-table";
+import { useState } from "react";
+import { useAsyncDebounce, Row } from "react-table";
 
-function GlobalFilter({
+const GlobalFilter = function ({
   preGlobalFilteredRows,
   globalFilter,
   setGlobalFilter,
@@ -9,9 +9,9 @@ function GlobalFilter({
   preGlobalFilteredRows: any;
   globalFilter: any;
   setGlobalFilter: any;
-}): any {
+}) {
   const count = preGlobalFilteredRows.length;
-  const [value, setValue] = React.useState(globalFilter);
+  const [value, setValue] = useState(globalFilter);
   const onChange = useAsyncDebounce((value) => {
     setGlobalFilter(value || undefined);
   }, 200);
@@ -31,6 +31,6 @@ function GlobalFilter({
       />
     </label>
   );
-}
+};
 
 export default GlobalFilter;

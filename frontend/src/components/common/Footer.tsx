@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +8,7 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noreferrer"
           href="https://feather-insurance.com/"
-          className={clsx("text-primary-600 hover:underline")}
+          className="text-primary-600 hover:underline"
         >
           Feather Insurance
         </a>{" "}
@@ -21,7 +20,7 @@ const Footer: React.FC = () => {
           href="https://www.github.com/sastava007"
           target="_blank"
           rel="noreferrer"
-          className={clsx("text-primary-600 hover:underline")}
+          className="text-primary-600 hover:underline"
         >
           Shivansh Srivastava
         </a>

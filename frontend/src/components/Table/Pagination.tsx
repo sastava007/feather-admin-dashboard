@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/solid";
 import { Button, PageButton } from "../common/Button";
 
-export const Pagination = ({
+const Pagination = ({
   previousPage,
   canPreviousPage,
   nextPage,

@@ -5,7 +5,7 @@ import logo from "../../../assets/logo.png";
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="TheSidebar absolute h-full w-full flex flex-col">
+    <div className="absolute h-full w-full flex flex-col">
       <div className="h-20 flex items-center top-0 px-4">
         <NavLink to="/" className="flex items-center ">
           <img

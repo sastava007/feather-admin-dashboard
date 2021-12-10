@@ -1,7 +1,7 @@
-import React from "react";
+import { ReactNode, useMemo } from "react";
 
-const SelectColumnFilter: React.ReactNode = ({ column }: { column: any }) => {
-  const options = React.useMemo(() => {
+const SelectColumnFilter: ReactNode = ({ column }: { column: any }) => {
+  const options = useMemo(() => {
     const options = new Set();
     column.preFilteredRows.forEach((row: any) => {
       options.add(row.values[column.id]);

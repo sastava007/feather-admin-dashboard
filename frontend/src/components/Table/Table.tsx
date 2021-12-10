@@ -91,7 +91,7 @@ const Table: React.FC = () => {
         }
       })
       .catch((err) => {
-        alert("Update failed, GraphQL error!");
+        alert("Update failed, please check update parameters!");
       });
     setIsEditing(!isEditing);
   };
@@ -191,7 +191,7 @@ const Table: React.FC = () => {
     useSortBy,
     usePagination
   );
-  
+
   return (
     <>
       {isEditing && (

@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 import { NavLink } from "react-router-dom";
 
 const menu = [
@@ -25,14 +24,7 @@ const Nav: React.FC = () => {
           <NavLink
             key={index}
             to={item.link}
-            className={clsx(`
-          block px-4 py-3 pl-12 mb-1
-          rounded-xl font-semibold
-          text-gray-600
-          hover:text-gray-900
-          hover:bg-primary-50
-          transition
-          `)}
+            className="block px-4 py-3 pl-12 mb-1 rounded-xl font-semibold text-gray-600 hover:text-gray-900 hover:bg-primary-50 transition"
           >
             {item.name}
           </NavLink>
