@@ -1,4 +1,3 @@
-import { join } from "path";
 import { readFileSync } from "fs";
 import { makeExecutableSchema } from "@graphql-tools/schema";
 import { resolvers } from "./resolvers/index";

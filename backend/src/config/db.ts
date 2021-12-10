@@ -1,6 +1,6 @@
 import mongoose, { ConnectOptions } from "mongoose";
 
-export let database: mongoose.Connection;
+let database: mongoose.Connection;
 
 export const connect = async () => {
   const uri = "mongodb://mongo_db:27017/db";
