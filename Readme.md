@@ -27,7 +27,7 @@ Step1:
     git clone https://github.com/sastava007/feather-admin-dashboard.git
 Step2:
 
-    cd feather-admin-dashboard
+    cd feather-admin-dashboard-main
 
 Step3:
 
